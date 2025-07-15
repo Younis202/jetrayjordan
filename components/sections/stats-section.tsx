@@ -1,62 +1,62 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-  Users, 
-  PhoneCall, 
-  Building2, 
-  Star, 
-  TrendingUp, 
-  Sparkles,
-  CheckCircle2,
+import {
   Award,
-  Target
+  Building2,
+  CheckCircle2,
+  PhoneCall,
+  Sparkles,
+  Star,
+  Target,
+  TrendingUp,
+  Users,
 } from "lucide-react";
 
 const stats = [
   {
-    icon: Users, 
+    icon: Users,
     value: "500K+",
     label: "Happy Travelers",
     description: "Satisfied customers worldwide",
     gradient: "from-blue-500 to-cyan-500",
-    bgColor: "bg-blue-50 dark:bg-blue-950/30"
+    bgColor: "bg-blue-50 dark:bg-blue-950/30",
   },
   {
-    icon: PhoneCall, 
+    icon: PhoneCall,
     value: "1M+",
     label: "Flights Booked",
     description: "Successfully completed bookings",
     gradient: "from-green-500 to-emerald-500",
-    bgColor: "bg-green-50 dark:bg-green-950/30"
+    bgColor: "bg-green-50 dark:bg-green-950/30",
   },
   {
-    icon: Building2, 
+    icon: Building2,
     value: "200+",
     label: "Destinations",
     description: "Cities and countries worldwide",
     gradient: "from-purple-500 to-indigo-500",
-    bgColor: "bg-purple-50 dark:bg-purple-950/30"
+    bgColor: "bg-purple-50 dark:bg-purple-950/30",
   },
   {
-    icon: Star, 
+    icon: Star,
     value: "98%",
     label: "Satisfaction",
     description: "Customer satisfaction rate",
     gradient: "from-yellow-500 to-orange-500",
-    bgColor: "bg-yellow-50 dark:bg-yellow-950/30"
-  }
+    bgColor: "bg-yellow-50 dark:bg-yellow-950/30",
+  },
 ];
 
 const achievements = [
   { icon: Award, label: "Industry Leader" },
   { icon: Target, label: "Proven Results" },
-  { icon: TrendingUp, label: "Consistent Growth" }
+  { icon: TrendingUp, label: "Consistent Growth" },
 ];
 
 export function StatsSection() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section id="stats" className="relative py-24 overflow-hidden">
       {/* Enhanced Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50/50 to-blue-50/30 dark:from-gray-900 dark:via-gray-900/50 dark:to-blue-950/30" />
@@ -78,7 +78,7 @@ export function StatsSection() {
               PROVEN PERFORMANCE
             </span>
           </motion.div>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -86,12 +86,12 @@ export function StatsSection() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight"
           >
-            Travel Stats That{' '}
+            Travel Stats That{" "}
             <span className="bg-gradient-to-r from-blue-600 via-green-600 to-purple-600 bg-clip-text text-transparent">
               Speak Volumes
             </span>
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -99,8 +99,9 @@ export function StatsSection() {
             transition={{ delay: 0.2 }}
             className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto"
           >
-            Our track record of excellence speaks for itself. See why travelers choose Jetray Jordan 
-            as their trusted travel partner for unforgettable journeys.
+            Our track record of excellence speaks for itself. See why travelers
+            choose Jetray Jordan as their trusted travel partner for
+            unforgettable journeys.
           </motion.p>
 
           {/* Achievement Badges */}
@@ -141,11 +142,15 @@ export function StatsSection() {
               className="group relative bg-white/70 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg border border-gray-200/50 dark:border-gray-700/50 hover:shadow-2xl hover:scale-[1.02] transition-all duration-500"
             >
               {/* Gradient Background */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`} />
-              
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`}
+              />
+
               {/* Enhanced Icon */}
               <div className="relative mb-6">
-                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${stat.gradient} p-1 shadow-lg mx-auto`}>
+                <div
+                  className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${stat.gradient} p-1 shadow-lg mx-auto`}
+                >
                   <div className="w-full h-full bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center">
                     <stat.icon className="h-10 w-10 text-gray-700 dark:text-gray-200" />
                   </div>
@@ -155,22 +160,26 @@ export function StatsSection() {
                   <CheckCircle2 className="w-4 h-4 text-white" />
                 </div>
               </div>
-              
+
               <div className="space-y-3">
                 <motion.div
                   initial={{ scale: 0.5 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.2 + index * 0.1, type: "spring", stiffness: 200 }}
+                  transition={{
+                    delay: 0.2 + index * 0.1,
+                    type: "spring",
+                    stiffness: 200,
+                  }}
                   className={`text-4xl md:text-5xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent`}
                 >
                   {stat.value}
                 </motion.div>
-                
+
                 <div className="text-xl font-bold text-gray-900 dark:text-white">
                   {stat.label}
                 </div>
-                
+
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   {stat.description}
                 </p>

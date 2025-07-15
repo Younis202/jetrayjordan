@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { 
-  Phone, 
-  Headset, 
-  BarChart as ChartBar, 
-  Clock, 
-  ArrowRight, 
+import {
+  Phone,
+  Headset,
+  BarChart as ChartBar,
+  Clock,
+  ArrowRight,
   Sparkles,
   Shield,
   Trophy,
@@ -27,28 +27,28 @@ export function CtaSection() {
 
   const features = [
     {
-      icon: Phone, 
+      icon: Phone,
       title: "Expert Travel Advisors",
       description: "Professional travel consultants available 24/7",
       gradient: "from-blue-500 to-cyan-500",
       highlight: "24/7 Available"
     },
     {
-      icon: Headset, 
+      icon: Headset,
       title: "Instant Booking",
       description: "Book flights instantly with immediate confirmation",
       gradient: "from-green-500 to-emerald-500",
       highlight: "Instant Confirm"
     },
     {
-      icon: ChartBar, 
+      icon: ChartBar,
       title: "Best Price Guarantee",
       description: "We guarantee the best prices or we'll match it",
       gradient: "from-purple-500 to-indigo-500",
       highlight: "Price Match"
     },
     {
-      icon: Clock, 
+      icon: Clock,
       title: "Flexible Booking",
       description: "Easy changes and cancellations with minimal fees",
       gradient: "from-orange-500 to-red-500",
@@ -69,7 +69,7 @@ export function CtaSection() {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section id="cta" className="relative py-24 overflow-hidden">
       {/* Enhanced Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/30 to-purple-50/50 dark:from-gray-900 dark:via-blue-950/30 dark:to-purple-950/50" />
@@ -107,9 +107,9 @@ export function CtaSection() {
                   </span>{' '}
                   the World?
                 </h2>
-                
+
                 <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Join 500K+ travelers who have discovered amazing destinations with 
+                  Join 500K+ travelers who have discovered amazing destinations with
                   Jetray Jordan's premium travel services. Start your journey today.
                 </p>
 
@@ -146,7 +146,7 @@ export function CtaSection() {
                   >
                     {/* Gradient Background */}
                     <div className={`absolute inset-0 bg-gradient-to-r ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-2xl`} />
-                    
+
                     <div className="flex items-center gap-4 relative">
                       {/* Enhanced Icon */}
                       <div className="relative">
@@ -160,7 +160,7 @@ export function CtaSection() {
                           {feature.highlight}
                         </div>
                       </div>
-                      
+
                       <div className="flex-1">
                         <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
                           {feature.title}
@@ -169,7 +169,7 @@ export function CtaSection() {
                           {feature.description}
                         </p>
                       </div>
-                      
+
                       <CheckCircle2 className="w-6 h-6 text-green-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </motion.div>
@@ -184,8 +184,8 @@ export function CtaSection() {
                 transition={{ delay: 0.5 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   onClick={handleContactClick}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg font-semibold px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 group"
                 >
@@ -193,9 +193,9 @@ export function CtaSection() {
                   Book Your Flight
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
-                
-                <Button 
-                  size="lg" 
+
+                <Button
+                  size="lg"
                   variant="outline"
                   onClick={handleContactClick}
                   className="border-2 border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-blue-400 text-lg font-semibold px-8 py-4 transition-all duration-300"
@@ -242,10 +242,10 @@ export function CtaSection() {
                   alt="Airplane flying through beautiful clouds"
                   className="w-full h-full object-cover"
                 />
-                
+
                 {/* Enhanced Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                
+
                 {/* Stats Overlay */}
                 <div className="absolute bottom-6 left-6 right-6">
                   <motion.div
@@ -296,7 +296,7 @@ export function CtaSection() {
               {/* Floating Elements */}
               <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-blue-400/30 to-purple-400/30 rounded-full blur-2xl" />
               <div className="absolute -top-8 -left-8 w-24 h-24 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-full blur-2xl" />
-              
+
               {/* Floating Stats */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
